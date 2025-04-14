@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "build": "npx tsc --build"
+  },
   "dependencies": {
     "@types/lodash": "^4.17.16",
     "@types/screeps": "^3.3.8"

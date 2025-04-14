@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "build": "npx tsc --build"
+    "build": "npx tsc --build",
+    "clean": ""
   },
   "dependencies": {
     "@types/lodash": "^4.17.16",

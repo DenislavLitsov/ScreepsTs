@@ -1,11 +1,10 @@
 {
     "compilerOptions": {
-      "module": "system",
       "lib": ["dom", "es2018"],
       "noImplicitAny": true,
       "removeComments": true,
       "preserveConstEnums": true,
-      "outFile": "C:/Users/denis/AppData/Local/Screeps/scripts/screeps.com/tutorial-1/main.js",
+      "outDir": "C:/Users/denis/AppData/Local/Screeps/scripts/screeps.com/tutorial-1",
       "sourceMap": true
     },
     "include": ["src/*"],

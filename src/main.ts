@@ -1,4 +1,4 @@
 import { Constants } from './constants';
+import { Engine } from './engine';
 
-console.log('works');
-console.log(Constants.MainRoomName);
+Engine.validateAndCreateMiningCreeps();

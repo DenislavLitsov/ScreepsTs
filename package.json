@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "npx tsc --build",
+    "build": "npx tsc --build && node scripts/flatten.js",
     "clean": ""
   },
   "dependencies": {

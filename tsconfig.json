@@ -5,8 +5,10 @@
       "removeComments": true,
       "preserveConstEnums": true,
       "outDir": "C:/Users/denis/AppData/Local/Screeps/scripts/screeps.com/tutorial-1",
-      "sourceMap": true
+      "sourceMap": true, 
+      "rootDir": "./src",
+      "rootDirs": ["./src"],
+      "preserveDirs": false,
     },
-    "include": ["src/*"],
     "exclude": ["**/*.spec.ts", "node_modules/**"]
   }

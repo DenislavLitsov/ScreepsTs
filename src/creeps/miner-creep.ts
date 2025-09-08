@@ -1,6 +1,6 @@
 import { BaseCreep } from "./base-creep";
 
-export class MinerCreep implements BaseCreep {
+export class MinerCreep extends BaseCreep {
     
     readonly Name: string = 'Miner';
     readonly Body: BodyPartConstant[] = ["move", "work", "carry", "carry", "carry"];

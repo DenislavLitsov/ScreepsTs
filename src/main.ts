@@ -1,4 +1,4 @@
-import { Constants } from './constants';
+import { Constants } from './constants/constants';
 import { Engine } from './engine';
 
 Engine.validateAndCreateMiningCreeps();

@@ -36,11 +36,17 @@ function fixImports(root) {
     for (const file of files) {
         const filePath = path.join(root, file);
         let content = fs.readFileSync(filePath, 'utf8');
-        // Replace ES6 imports like './subfolder/file' or './subfolder/file.ts' with './file'
+        // Replace ES6 imports like './subfolder/file', '../subfolder/file', etc. with './file'
+        content = content.replace(/(from\s+['"]\.\.\/([^\/]+)\/(.+?)(\.ts)?['"])/g, (match, p1, sub, file, ext) => {
+            return `from './${file}'`;
+        });
         content = content.replace(/(from\s+['"]\.\/(.+?)\/(.+?)(\.ts)?['"])/g, (match, p1, sub, file, ext) => {
             return `from './${file}'`;
         });
-        // Replace CommonJS require statements like require('./subfolder/file') or require('./subfolder/file.js') with require('./file')
+        // Replace CommonJS require statements like require('../subfolder/file'), require('./subfolder/file.js'), etc. with require('./file')
+        content = content.replace(/(require\(['"]\.\.\/([^\/]+)\/(.+?)(\.js|\.ts)?['"]\))/g, (match, p1, sub, file, ext) => {
+            return `require('./${file}')`;
+        });
         content = content.replace(/(require\(['"]\.\/(.+?)\/(.+?)(\.js|\.ts)?['"]\))/g, (match, p1, sub, file, ext) => {
             return `require('./${file}')`;
         });

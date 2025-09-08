@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "npx tsc --build && node scripts/flatten.js",
+    "build": "npx tsc --build && node scripts/flatten-and-fix-imports.js C:\\Users\\denis\\AppData\\Local\\Screeps\\scripts\\screeps.com\\build",
     "clean": ""
   },
   "dependencies": {
